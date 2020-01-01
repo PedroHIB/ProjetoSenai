@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">        
+        <title>Fablab</title>
+        <link rel="icon" href="imagem/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/dashboard.css">
+		<link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/midia.css">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+	
+        <nav class="navbar navbar-expand navbar-dark bg-primary">
+            <a class="sidebar-toggle text-light mr-3">
+                <span class="navbar-toggler-icon"></span>
+            </a>
+            <a class="navbar-brand" href="#">Fablab</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle menu-header" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                            <img class="rounded-circle" src="imagem/iconuser48.png" width="20" height="20"> &nbsp;<span class="d-none d-sm-inline">Usuário</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Perfil</a>
+                            <a class="dropdown-item" href="#">Sair</a>
+                        </div>
+                    </li>
+                </ul>                
+            </div>
+        </nav>
+<!------------------------CARDS--------------------------------------------------------------------->
+		<div class="d-flex">
+            <nav class="sidebar">
+                <ul class="list-unstyled">
+				<a href="#submenu1" data-toggle="collapse">
+                    <li class="active"><a><i class="fas fa-chalkboard-teacher" href="#"></i> Área do Aluno</a></li>
+				</a>
+					<li><a href="caledario.html"><i class="far fa-calendar-alt"></i> Calendário Mensal</a></li>
+					<li><a href="notas.html"><i class="fas fa-user-graduate"></i> Minhas Notas</a></li>
+					<li><a href="projetos.html"><i class="far fa-edit"></i> Projetos em Andamento</a></li>
+					<li><a href="#upload.html"><i class="fas fa-upload"></i> Upload</a></li>
+                    <li><a href="videos.html"><i class="fas fa-video"></i> Vídeos</a></li>
+					<li><a href="softwares.html"><i class="fas fa-laptop"></i> Softwares Disponíveis</a></li>
+					<li><a href="instrucoes.html"><i class="fas fa-book-reader"></i> Instruções</a></li>
+                    <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                </ul>
+            </nav>
+            <div class="content p-1">
+                <div class="list-group-item">
+                    <div class="d-flex">
+                        <div class="mr-auto p-2">
+                            <h2 class="display-4 titulo">Vídeos Aulas </h2>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-lg-3 col-sm-6" role="button" data-toggle="modal" data-target="#exampleModal">
+                            <div class="card bg-success text-white" id="a1">
+                                <div class="card-body">
+                                    <i class="fas fa-arrow-alt-circle-down fa-3x"></i>
+                                    <h6 class="card-title">Arduíno</h6>
+                                    <h2 class="lead">5 videos</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6" role="button" data-toggle="modal" data-target="#exampleModal2">
+                            <div class="card bg-danger text-white" id="a1">
+                                <div class="card-body">
+                                    <i class="fab fa-autoprefixer fa-3x"></i>
+                                    <h6 class="card-title">CNC</h6>
+                                    <h2 class="lead">5 videos</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6" role="button" data-toggle="modal" data-target="#exampleModal3">
+                            <div class="card bg-warning text-white" id="a1">                                
+                                <div class="card-body">
+                                    <i class="fab fa-connectdevelop fa-3x"></i>
+                                    <h6 class="card-title">Corte a laser</h6>
+                                    <h2 class="lead">6 videos</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6" role="button" data-toggle="modal" data-target="#exampleModal4">
+                            <div class="card bg-info text-white" id="a1">
+                                <div class="card-body">
+                                    <i class="fas fa-clone fa-3x"></i>
+                                    <h6 class="card-title">Impressão 3D</h6>
+                                    <h2 class="lead">4 videos</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!------------------------------------------- Modal1 ---------------------------------------------------->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Arduíno</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+	<div class="modal-body">
+	
+<!--------------------------------------------------------------------------->
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Video</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Texto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><button type="button" class="btn btn-success">Atualizar</button></td>
+      <td><button type="button" class="btn btn-success">Atualizar</button></td>
+      <td><button type="button" class="btn btn-success">Atualizar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><button type="button" class="btn btn-success">Atualizar</button></td>
+      <td><button type="button" class="btn btn-success">Atualizar</button></td>
+      <td><button type="button" class="btn btn-success">Atualizar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><button type="button" class="btn btn-success">Atualizar</button></td>
+      <td><button type="button" class="btn btn-success">Atualizar</button></td>
+      <td><button type="button" class="btn btn-success">Atualizar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><button type="button" class="btn btn-success">Atualizar</button></td>
+      <td><button type="button" class="btn btn-success">Atualizar</button></td>
+      <td><button type="button" class="btn btn-success">Atualizar</button></td>
+    </tr>
+        <tr>
+      <th scope="row">5</th>
+      <td><button type="button" class="btn btn-success">Atualizar</button></td>
+      <td><button type="button" class="btn btn-success">Atualizar</button></td>
+      <td><button type="button" class="btn btn-success">Atualizar</button></td>
+    </tr>
+  </tbody>
+</table>
+<!--------------------------------------------------------------------------->
+</div>
+    <div class="modal-footer">
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+    </div>
+  </div>
+</div>
+<!------------------------------------------- Modal1 ---------------------------------------------------->
+<!------------------------------------------- Modal2 ---------------------------------------------------->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">CNC</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" id="fechar">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+	  
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Video</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Texto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><button type="button" class="btn btn-danger">Atualizar</button></td>
+      <td><button type="button" class="btn btn-danger">Atualizar</button></td>
+      <td><button type="button" class="btn btn-danger">Atualizar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><button type="button" class="btn btn-danger">Atualizar</button></td>
+      <td><button type="button" class="btn btn-danger">Atualizar</button></td>
+      <td><button type="button" class="btn btn-danger">Atualizar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><button type="button" class="btn btn-danger">Atualizar</button></td>
+      <td><button type="button" class="btn btn-danger">Atualizar</button></td>
+      <td><button type="button" class="btn btn-danger">Atualizar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><button type="button" class="btn btn-danger">Atualizar</button></td>
+      <td><button type="button" class="btn btn-danger">Atualizar</button></td>
+      <td><button type="button" class="btn btn-danger">Atualizar</button></td>
+    </tr>
+        <tr>
+      <th scope="row">5</th>
+      <td><button type="button" class="btn btn-danger">Atualizar</button></td>
+      <td><button type="button" class="btn btn-danger">Atualizar</button></td>
+      <td><button type="button" class="btn btn-danger">Atualizar</button></td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!------------------------------------------- Modal2 ---------------------------------------------------->
+<!------------------------------------------- Modal3 ---------------------------------------------------->
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Corte a laser</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body"> 
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Video</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Texto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+    </tr>
+        <tr>
+      <th scope="row">5</th>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+    </tr>
+    <th scope="row">6</th>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+      <td><button type="button" class="btn btn-warning">Atualizar</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!------------------------------------------- Modal3 ---------------------------------------------------->
+<!------------------------------------------- Modal4 ---------------------------------------------------->
+<div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Impressão 3D</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Video</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Texto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><button type="button" class="btn btn-info">Atualizar</button></td>
+      <td><button type="button" class="btn btn-info">Atualizar</button></td>
+      <td><button type="button" class="btn btn-info">Atualizar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><button type="button" class="btn btn-info">Atualizar</button></td>
+      <td><button type="button" class="btn btn-info">Atualizar</button></td>
+      <td><button type="button" class="btn btn-info">Atualizar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><button type="button" class="btn btn-info">Atualizar</button></td>
+      <td><button type="button" class="btn btn-info">Atualizar</button></td>
+      <td><button type="button" class="btn btn-info">Atualizar</button></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><button type="button" class="btn btn-info">Atualizar</button></td>
+      <td><button type="button" class="btn btn-info">Atualizar</button></td>
+      <td><button type="button" class="btn btn-info">Atualizar</button></td>
+    </tr>
+  </tbody>
+</table>
+       </div>
+		<div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!------------------------------------------- Modal4 ---------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------->
+<div class="card-deck">
+  <div class="card">
+    <a role="button">
+    <video src="media/aa.mp4" controls="controls" class="card-img-top" alt="..." poster="imagem/logo_senai.png"></a>
+    <div class="card-body">
+      <h5 class="card-title">Historia do senai</h5>
+      <p class="card-text">O Serviço Nacional de Aprendizagem Industrial (SENAI) foi criado em 22 de janeiro de 1942, pelo Decreto-Lei 4.048 do então presidente Getúlio Vargas, com a missão de formar profissionais para a incipiente indústria nacional.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">ultima atualizacao 29/04/19</small>
+      <button type="button" class="btn btn-danger">Atualizar</button>
+    </div>
+  </div>
+  <div class="card">
+    <a role="button">
+    <video src="media/aa.mp4" controls="controls" class="card-img-top" alt="..." poster="imagem/logo_senai.png"></a>
+      <div class="card-body">
+      <h5 class="card-title">SENAI FabLab</h5>
+      <p class="card-text">Nova Friburgo acaba de ganhar o SENAI FabLab, um ambiente pensado para estimular a inovação, com espaços para fabricação digital voltados, principalmente, para a prototipagem.</p>
+    </div>
+   
+    <div class="card-footer">
+      <small class="text-muted">ultima atualizacao 29/04/19</small>
+      <button type="button" class="btn btn-danger">Atualizar</button>
+    </div>
+  </div>
+  <div class="card">
+    <a role="button">
+    <video src="media/aa.mp4" controls="controls" class="card-img-top" alt="..." poster="imagem/logo_senai.png"></a>
+    <div class="card-body">
+      <h5 class="card-title">Convenio</h5>
+      <p class="card-text">Empresas associadas a um dos 102 sindicatos filiados à Firjan ou à Firjan CIRJ podem desfrutar de uma série de produtos e serviços de parceiros, com condições especiais. Fique atento às novidades e novos parceiros.</p>
+      <a class="btn btn-primary" role="button" href="https://www.firjan.com.br/fale-conosco/"> Fale Conosco</a>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">ultima atualizacao 29/04/19</small>
+      <button type="button" class="btn btn-danger">Atualizar</button>
+    </div>
+  </div>
+</div>
+
+<!------------------------------------------------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>			
+</body>
+<!------------------------Footer--------------------------------------------------------------------->
+<footer class="page-footer font-small special-color-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1" href="https://pt-br.facebook.com/" target="blank">
+          <img src="imagem/LFacebook2.png">
+          <i class="fab fa-facebook-f">Facebook</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1" href="https://twitter.com/login?lang=pt" target="blank">
+          <img src="imagem/LTwitter2.png">  
+          <i class="fab fa-twitter">Twitter </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-whatsapp mx-1" href="https://web.whatsapp.com/" target="blank" >
+            <img src="imagem/Lwhatsapp2.png">  
+            <i class="fab fa-whatsapp">Whatsapp </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1" href="https://www.instagram.com/?hl=pt-br" target="blank">
+            <img src="imagem/LInstagram2.png">
+            <i class="fab fa-instagram pr-1">Instagram </i>
+          </a>
+        </li>
+      </ul>
+      <!-- Social buttons -->
+
+    </div>
+    <!-- Footer Elements -->
+  </footer>
+<!------------------------Footer--------------------------------------------------------------------->
+</html>

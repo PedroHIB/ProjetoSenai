@@ -1,0 +1,12 @@
+Para desenvolver essa plataforma seguimos as seguintes etapas
+
+°Divisão da tarefas
+°Criação de cronograma
+°Levantamento de requezitos
+°Desenvolvimento do layout
+°Desenvolvimento do front end
+°Desenvolvimento do back end
+°Teste de usabilidade
+°Teste de integridade 
+°Disponibilidade
+°Apresentação

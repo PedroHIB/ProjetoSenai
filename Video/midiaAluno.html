@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">        
+        <title>Fablab</title>
+        <link rel="icon" href="imagem/logofablab.png">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/dashboard.css">
+		<link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/midia.css">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+	
+        <nav class="navbar navbar-expand navbar-dark bg-primary">
+            <a class="sidebar-toggle text-light mr-3">
+                <span class="navbar-toggler-icon"></span>
+            </a>
+            <a class="navbar-brand" href="#">Fablab</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle menu-header" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                            <img class="rounded-circle" src="imagem/iconuser48.png" width="20" height="20"> &nbsp;<span class="d-none d-sm-inline">Usuário</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Perfil</a>
+                            <a class="dropdown-item" href="#">Sair</a>
+                        </div>
+                    </li>
+                </ul>                
+            </div>
+        </nav>
+<!------------------------CARDS--------------------------------------------------------------------->
+		<div class="d-flex">
+            <nav class="sidebar">
+                <ul class="list-unstyled">
+				<a href="#submenu1" data-toggle="collapse">
+                    <li class="active"><a><i class="fas fa-chalkboard-teacher" href="#"></i> Área do Aluno</a></li>
+				</a>
+					<li><a href="caledario.html"><i class="far fa-calendar-alt"></i> Calendário Mensal</a></li>
+					<li><a href="notas.html"><i class="fas fa-user-graduate"></i> Minhas Notas</a></li>
+					<li><a href="projetos.html"><i class="far fa-edit"></i> Projetos em Andamento</a></li>
+					<li><a href="#upload.html"><i class="fas fa-upload"></i> Upload</a></li>
+                    <li><a href="videos.html"><i class="fas fa-video"></i> Vídeos</a></li>
+					<li><a href="C:\Users\Aluno\Desktop\Projeto\fablab_teste_0\softwares.php"><i class="fas fa-laptop"></i> Softwares Disponíveis</a></li>
+					<li><a href="instrucoes.html"><i class="fas fa-book-reader"></i> Instruções</a></li>
+                    <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                </ul>
+            </nav>
+            <div class="content p-1">
+                <div class="list-group-item">
+                    <div class="d-flex">
+                        <div class="mr-auto p-2">
+                            <h2 class="display-4 titulo">Vídeos Aulas </h2>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-lg-3 col-sm-6" role="button" data-toggle="modal" data-target="#exampleModal">
+                            <div class="card bg-success text-white" id="a1">
+                                <div class="card-body">
+                                    <i class="fas fa-arrow-alt-circle-down fa-3x"></i>
+                                    <h6 class="card-title">Arduíno</h6>
+                                    <h2 class="lead">5 videos</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6" role="button" data-toggle="modal" data-target="#exampleModal2">
+                            <div class="card bg-danger text-white" id="a1">
+                                <div class="card-body">
+                                    <i class="fab fa-autoprefixer fa-3x"></i>
+                                    <h6 class="card-title">CNC</h6>
+                                    <h2 class="lead">5 videos</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6" role="button" data-toggle="modal" data-target="#exampleModal3">
+                            <div class="card bg-warning text-white" id="a1">                                
+                                <div class="card-body">
+                                    <i class="fab fa-connectdevelop fa-3x"></i>
+                                    <h6 class="card-title">Corte a laser</h6>
+                                    <h2 class="lead">6 videos</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6" role="button" data-toggle="modal" data-target="#exampleModal4">
+                            <div class="card bg-info text-white" id="a1">
+                                <div class="card-body">
+                                    <i class="fas fa-clone fa-3x"></i>
+                                    <h6 class="card-title">Impressão 3D</h6>
+                                    <h2 class="lead">4 videos</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!------------------------------------------- Modal1 ---------------------------------------------------->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Arduíno</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+	<div class="modal-body">
+	
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+  Aula 1
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 1</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\Arduíno\Tutorial - Eletrônica 1_Criando uma conta no Tinkercard.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Criando uma conta no Tinkercard</h5>
+				<p>[TEXTO AQUI]</p>
+			</div>
+			</div>
+		</div>
+		</div>
+		
+		</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!--------------------------------------------------------------------------->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable2">
+  Aula 2
+</button>
+<div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 2</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\Arduíno\Tutorial - Eletrônica 2_Ambiente de trabalho no Tinkercard.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Ambiente de trabalho no Tinkercard</h5>
+				<p>[TEXTO AQUI]</p>
+			</div>
+			</div>
+		</div>
+		</div>		
+</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!--------------------------------------------------------------------------->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable3">
+  Aula 3
+</button>
+<div class="modal fade" id="exampleModalScrollable3" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 3</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\Arduíno\Tutorial - Eletrônica 3_Montando Circuitos no Tinkercard.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Montando Circuitos no Tinkercard</h5>
+				<p>[TEXTO AQUI]</p>
+			</div>
+			</div>
+		</div>
+		</div>		
+</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!--------------------------------------------------------------------------->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable4">
+  Aula 4
+</button>
+<div class="modal fade" id="exampleModalScrollable4" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 4</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\Arduíno\Tutorial - Eletrônica 4_Programando no Tinkercard.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Programando no Tinkercard</h5>
+				<p>[TEXTO AQUI]</p>
+			</div>
+			</div>
+		</div>
+		</div>		
+</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!--------------------------------------------------------------------------->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable5">
+  Aula 5
+</button>
+<div class="modal fade" id="exampleModalScrollable5" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 5</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\Arduíno\Tutorial Eletrônica  5_Cálculo_resistores.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Cálculo Resistores</h5>
+				<p>[TEXTO AQUI]</p>
+			</div>
+			</div>
+		</div>
+		</div>		
+</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+</div>
+    <div class="modal-footer">
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+    </div>
+  </div>
+</div>
+<!------------------------------------------- Modal1 ---------------------------------------------------->
+<!------------------------------------------- Modal2 ---------------------------------------------------->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">CNC</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" id="fechar">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+	  
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollablec1">
+  Aula 1
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollablec1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 1</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\CNC\CAM_ADM.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">CAM ADM</h5>
+				<p>[TEXTO AQUI]</p>
+			</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollablec2">
+  Aula 2
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollablec2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 2</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\CNC\CAM_MakerCam.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">CAM MakerCam</h5>
+				<p>[TEXTO AQUI]</p>
+			</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollablec3">
+  Aula 3
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollablec3" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 3</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\CNC\MakerCam.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">MakerCam</h5>
+				<p>[TEXTO AQUI]</p>
+			</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollablec4">
+  Aula 4
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollablec4" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 4</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\CNC\Tutorial_CNC_CNC.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Tutorial CNC</h5>
+				<p>[TEXTO AQUI]</p>
+			</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollablec5">
+  Aula 5
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollablec5" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 5</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\CNC\Tutorial_CNC_Letras_Mudo.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Letras Mudo</h5>
+				<p>[TEXTO AQUI]</p>
+			</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!------------------------------------------- Modal2 ---------------------------------------------------->
+<!------------------------------------------- Modal3 ---------------------------------------------------->
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Corte a laser</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body"> 
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollablecl1">
+  Aula 1
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollablecl1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 1</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\Corte a Laser\1.0 - Como gerar um arquivo de corte.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Como gerar um arquivo de corte</h5>
+				<p>[TEXTO AQUI]</p>
+      </div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>	  
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollablecl2">
+  Aula 2
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollablecl2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 2</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="media/Corte a Laser/1.1 - Como gerar um arquivo de corte.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Como gerar um arquivo de corte</h5>
+				<p>[TEXTO AQUI]</p>
+      </div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollablecl3">
+  Aula 3
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollablecl3" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 3</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\Corte a Laser\1.2 - Como gerar um arquivo de corte.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Como gerar um arquivo de corte</h5>
+				<p>[TEXTO AQUI]</p>
+      </div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>			  
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollablecl4">
+  Aula 4
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollablecl4" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 4</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\Corte a Laser\1.3 - Como gerar um arquivo de corte.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Como gerar um arquivo de corte</h5>
+				<p>[TEXTO AQUI]</p>
+      </div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>	
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollablecl5">
+  Aula 5
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollablecl5" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 5</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\Corte a Laser\1.4 - Como gerar um arquivo de corte.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Como gerar um arquivo de corte</h5>
+				<p>[TEXTO AQUI]</p>
+      </div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollablecl6">
+  Aula 6
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollablecl6" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 6</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\Corte a Laser\2_Tutorial de utilização da Máquina de corte à Laser.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Utilização da Máquina de corte à Laser</h5>
+				<p>[TEXTO AQUI]</p>
+      </div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>		  	  
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!------------------------------------------- Modal3 ---------------------------------------------------->
+<!------------------------------------------- Modal4 ---------------------------------------------------->
+<div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Impressão 3D</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollabl3d">
+  Aula 1
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollabl3d" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 1</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\Impressão 3D\Aula 1.1_Tutorial - Solidowks 2.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Solidowks 1</h5>
+				<p>[TEXTO AQUI]</p>
+      </div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollabl3d2">
+  Aula 2
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollabl3d2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 2</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\Impressão 3D\Aula 1_Tutorial - Solidowrks 1.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Solidowks 2</h5>
+				<p>[TEXTO AQUI]</p>
+      </div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollabl3d3">
+  Aula 3
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollabl3d3" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 3</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\Impressão 3D\Aula 2_Tutorial de operacao do software da impressora.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Tutorial de operaçao do software da impressora</h5>
+				<p>[TEXTO AQUI]</p>
+      </div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollabl3d4">
+  Aula 4
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollabl3d4" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Aula 4</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+			<div class="container">
+			<div class="c-video">
+			<video controls height="300x" width="300px">
+				<source src="\\stosenfri0101\TUTORIAIS\Impressão 3D\Aula 2.1_Tutorial de utilização da Impressora 3D.mp4" type="video/mp4" class="align-self-start mr-3" alt="...">
+			</video>
+			<div class="media-body">
+				<h5 class="mt-0">Tutorial de utilização da Impressora 3D</h5>
+				<p>[TEXTO AQUI]</p>
+      </div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+       </div>
+		<div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!------------------------------------------- Modal4 ---------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------->
+<div class="card-deck">
+  <div class="card">
+    <a role="button">
+    <video src="\\stosenfri0101\web\Video\midia\O que é um FabLab.mp4" type="video/mp4" controls="controls" class="card-img-top" alt="..." poster="imagem/logo.png"></a>
+    <div class="card-body">
+      <h5 class="card-title">O que é um FabLab?</h5>
+      <p class="card-text">Um ambiente pensado para estimular a inovação, com laboratórios de fabricação digital voltados para a educação profissional. A criatividade em uma nova dimensão dentro da Firjan SENAI.
+
+      <p>No laboratório FabLab, os alunos são estimulados a desenvolver todo o processo produtivo para construção de soluções para a indústria – da ideia ao protótipo, passando por todas as etapas até chegar a avaliação do resultado –, sem contar o conhecimento adquirido para a elaboração da documentação técnica dos projetos.</p></p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">ultima atualizacao 30/05/19</small>
+    </div>
+  </div>
+  <div class="card">
+    <a role="button">
+    <video src="\\stosenfri0101\web\Video\midia\Conheça o SENAI FabLab.mp4" type="video/mp4" controls="controls" class="card-img-top" alt="..." poster="imagem/logo.png"></a>
+      <div class="card-body">
+      <h5 class="card-title">Conheça o SENAI FabLab</h5>
+      <p class="card-text">No SENAI FabLab, os alunos são estimulados a desenvolver todo o processo produtivo para construção de soluções para a indústria – da ideia ao protótipo. </p>
+    </div>
+   
+    <div class="card-footer">
+      <small class="text-muted">ultima atualizacao 30/05/19</small>
+    </div>
+  </div>
+  <div class="card">
+    <a role="button">
+    <video src="\\stosenfri0101\web\Video\midia\Alunos descobrem o SENAI FabLab.mp4" type="video/mp4" controls="controls" class="card-img-top" alt="..." poster="imagem/logo.png"></a>
+    <div class="card-body">
+      <h5 class="card-title">Por dentro do FabLab</h5>
+      <p class="card-text">O laboratório FabLab da Firjan SENAI é mais do que uma sala de aula ou um laboratório de prototipagem. É a transformação desses dois espaços em um novo ambiente. Um ambiente voltado à educação para inovação, no qual todo processo criativo é realizado em um só lugar.
+
+Aqui, uma ideia inovadora é proposta e analisada em equipe, dando início à concepção de um projeto. Aqui ocorre a escolha de materiais e construção de protótipos. Aqui são realizados testes e ajustes nos projetos. Aqui uma ideia pode virar uma solução. Aqui começa a surgir um profissional multidisciplinar, preparado para a nova indústria. </p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">ultima atualizacao 30/05/19</small>
+    </div>
+  </div>
+</div>
+
+<!------------------------------------------------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>			
+</body>
+</html>

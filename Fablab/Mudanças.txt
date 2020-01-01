@@ -1,0 +1,3 @@
+bootstrap.css
+linhas 155 a mudança de cores footer icones sociais
+       162 a:hover idem.

@@ -1,0 +1,20 @@
+site oficial = https://www.arduino.cc/
+softwares = https://www.arduino.cc/en/Main/Software
+techs:
+Microcontrolador 		ATmega328P
+Voltagem de operação		5V
+Voltagem de entrada    		recomendada de 7 a 12V
+Voltagem de entrada     	Max 6 a 20V
+Pinos Digitais I/O  		14
+Pinos PWM Digitais I/O  	6
+Pinos entrada Analógica  Pins 	6
+Corrente DC por  Pino I/O 	20 mA
+Corrente DC para Pino 3.3V  	50 mA
+Memória Flash 32 KB (ATmega328P) com 0.5 KB usado para bootloader
+Memória SRAM   2 KB (ATmega328P)
+Memória EEPROM 1 KB (ATmega328P)
+Velocidade de clock		16 MHz
+LED_BUILTIN (led onboard) 	13
+Comprimento 		 	68.6 mm
+Largura 			53.4 mm
+Peso 				25 g

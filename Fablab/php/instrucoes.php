@@ -1,0 +1,569 @@
+<?php 
+  
+  session_start();
+  if(!isset($_SESSION['id_usuarios']))
+  {
+    header("location: index.php");
+    exit;
+  } 
+
+ ?>
+ 
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">      
+    <title>Fablab</title>
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="icon" href="../icones/logo_fab.png">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/grid.css">
+    <link rel="stylesheet" type="text/css" href="../css/carousel.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+		<link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" type="text/css" href="../css/media.css">
+  </head>
+  <body>
+    <header>
+	    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <a class="sidebar-toggle text-light mr-3">
+        <span class="navbar-toggler-icon"></span>
+        </a>
+        <a class="navbar-brand" href="#">Fablab</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle menu-header" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+              <img class="rounded-circle" src="../icones/iconuser48.png" width="20" height="20"> &nbsp;<span class="d-none d-sm-inline">Usuário</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Perfil</a>
+              <a class="dropdown-item" href="sair.php">Sair</a>
+              </div>
+            </li>
+          </ul>                
+        </div>
+      </nav>
+    </header>
+                  <!-- carousel -->
+      <div class="d-flex">
+        <div class="col-md-3" style="background-color:#ffffff">
+          <img id="logoside" src="../icones/logo_senai.png">           
+        </div>        
+        <div class="col-md-6" style="background-color: #ffffff">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="first-slide" src="../imagem/le1490.jpg" alt="First slide">
+                <div class="container">
+                  <div class="carousel-caption text-left">
+                    <h1></h1>
+                    <p></p>
+                    <p><a class="btn btn-lg btn-primary" href="https://engraver.com.br" role="button" target="blank">Cortadora Laser</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="second-slide" src="../imagem/printer_ardu.jpg" alt="Second slide">
+                <div class="container">
+                <div class="carousel-caption text-left text-white">
+                  <h1></h1>
+                  <p></p>
+                  <p><a class="btn btn-lg btn-primary" href="https://www.arduino.cc/" role="button" target="blank">Printer 3D Arduino</a></p>
+                </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="third-slide" src="../imagem/spl2515.jpg" alt="Third slide">
+                <div class="container">
+                  <div class="carousel-caption text-left text-primary">
+                    <h1></h1>
+                    <p></p>
+                    <p><a class="btn btn-lg btn-primary" href="https://engraver.com.br" role="button">Fresadora</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="Fourth-slide" src="../imagem/clevercl2.jpg" alt="Fourth slide">
+                <div class="container">
+                  <div class="carousel-caption text-right">
+                    <h1></h1>
+                    <p></p>
+                    <p><a class="btn btn-lg btn-primary" href="https://cliever.com" role="button" target="blank">Printer 3D</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Voltar</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Avançar</span>
+           </a>
+          </div>
+        </div>
+        <div class="col-md-3" style="background-color:#ffffff">
+          <img id="logoside" src="../icones/logo_senai.png">
+        </div>
+      </div>
+                  <!--fim carousel-->
+                  <!-- menu lateral -->
+      <div class="d-flex">
+        <nav class="sidebar">
+          <ul class="list-unstyled">
+            <li><a href="#submenu1" data-toggle="collapse">
+					  <li><a href="index.html"><i class="fas fa-chalkboard-teacher"></i> Área do Aluno</a></li>
+            </a></li>          
+            <li><a href="caledario.html"><i class="far fa-calendar-alt"></i> Calendário Mensal</a></li>
+					  <li><a href="notas.html"><i class="fas fa-user-graduate"></i> Minhas Notas</a></li>
+					  <li><a href="projetos.html"><i class="far fa-edit"></i> Projetos em Andamento</a></li>
+					  <li><a href="upload.html"><i class="fas fa-upload"></i> Upload</a></li>
+            <li><a href="filmes.html"><i class="fas fa-video"></i> Vídeos</a></li>
+					  <li><a href="softwares.html"><i class="fas fa-laptop"></i> Softwares Disponíveis</a></li>
+            <li class="active"><a href="instrucoes.php"><i class="fas fa-book-reader"></i> Instruções</a></li>
+            <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+          </ul>
+        </nav>
+                  <!--Fim Menu Lateral-->
+                  <!-- tabelas Caract.-->
+        <div class="content p-1">
+          <div class="list-group-item">
+            <div class="d-flex">
+              <div class="mr-auto p-2">
+                <h2 class="display-4 titulo">Instruções & Manuais</h2>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-lg-3 col-sm-6">
+                <div class="card bg-info text-white">
+                  <div class="card-body">
+                    <i class="fas fa-microchip fa-3x"></i>
+                    <h6 class="text-white">Arduino</h6>
+                    <a href="#caracteristicas">Características</a><br>
+                    <a href="../outros/manual_arduino.pdf" target="blank">Manual Arduino</a><br>
+                    <!--a href="outros/arduinopinout.jpg" target="blank">Pinagem Uno R3</a-->
+                    <a href="../outros/node32spinout.png" target="blank">Pinagem NodeMCU32S</a><br>
+                    <a href="../outros/ESP8266NodeMCUPinout.png" target="blank">Pinagem MCUESP8266</a><br>
+                    <h2 class="lead">4</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="card bg-danger text-white">
+                  <div class="card-body">
+                    <i class="fas fa-thumbtack fa-3x"></i>
+                    <h6 class="card-title">Fresadora</h6>
+                    <a href="#caracteristicas">Características</a><br>
+                    <a href="../outros/Manual de Usuário.pdf" target="blank">Manual Usuário</a><br>
+                    <a href="../outros/Uso Softwares.docx" target="blank">Uso De Softwares</a><br>
+                    <a href="../outros/Comandos de Painel.docx" target="blank">Comandos de Painel</a>
+                    <h2 class="lead">3</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="card bg-warning text-white">
+                  <div class="card-body">
+                    <i class="fas fa-print fa-3x"></i>
+                    <h6 class="card-title">Impressora 3D</h6>
+                    <a href="#caracteristicas">Características</a><br>
+                    <a href="../outros/Manual CL2 Pro 1 e 2.pdf" target="blank">Manual Usuário</a><br>
+                    <a href="../outros/instalacao-cliever-studio.pdf" target="blank">Instalação De Softwares</a><br>
+                    <a href="../outros/instruções-basicas-3d.pdf" target="blank">Instruções Básicas</a>
+                    <h2 class="lead">3</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="card bg-success text-white">
+                  <div class="card-body">
+                    <i class="fas fa-x-ray fa-3x"></i>
+                    <h6 class="card-title">Cortadora Laser</h6>
+                    <a href="#caracteristicas">Características</a><br>
+                    <a href="../outros/Manual de Usuário.pdf" target="blank">Manual Usuário</a><br>
+                    <a href="../outros/Uso Softwares.docx" target="blank">Uso De Softwares</a><br>
+                    <a href="../outros/Comandos de Painel.docx" target="blank">Comandos de Painel</a>
+                    <h2 class="lead">3</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <video id="filme" controls="controls" >
+                  <source src="../video/impressora3D.mp4" type="video/mp4">
+                  <source src="../video/impressora3D.ogg" type="video/ogg">
+                  <source src="../video/impressora3D.webm" type="video/webm"> 
+                  Seu navegador não suporta o formato deste vídeo.
+                </video>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <video id="filme" controls>
+                  <source src="../video/impressora3D.mp4" type="video/mp4">
+                  <source src="../video/impressora3D.ogg" type="video/ogg">
+                  <source src="../video/impressora3D.webm" type="video/webm"> 
+                  Seu navegador não suporta o formato deste vídeo.
+                </video>
+              </div>  
+              <div class="col-lg-3 col-sm-6">
+                <video id="filme" controls>
+                  <source src="../video/impressora3D.mp4" type="video/mp4">
+                  <source src="../video/impressora3D.ogg" type="video/ogg">
+                  <source src="../video/impressora3D.webm" type="video/webm"> 
+                  Seu navegador não suporta o formato deste vídeo.
+                </video>
+              </div> 
+              <div class="col-lg-3 col-sm-6">
+                <video id="filme" controls>
+                  <source src="../video/impressora3D.mp4" type="video/mp4">
+                  <source src="../video/impressora3D.ogg" type="video/ogg">
+                  <source src="../video/impressora3D.webm" type="video/webm"> 
+                  Seu navegador não suporta o formato deste vídeo.
+                </video>
+              </div>
+              <!--video-->
+            </div>
+            <div class="content p-1">
+            <div class="d-flex">
+              <div class="mr-auto p-2">
+                <h2 class="display-4 titulo" id="caracteristicas">Características Básicas</h2>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-lg-3 col-sm-6">
+                <div class="card text-black-50">
+                  <div class="card-body text-info">
+                    <i class="fas fa-microchip fa-3x"></i>
+                    <h6>Arduino</h6>
+                    <table class="table-responsive table-striped text-black-50" id="maior">
+                      <tr>
+                        <th>Modelo</th>
+                        <td>Uno R3</td>
+                      </tr>
+                      <tr>
+                        <th>Alimentação Externa</th>
+                        <td>Recomendada de 7 a 12VDC</td>
+                      </tr>
+                      <tr>
+                        <th>Alimentação Externa</th>
+                        <td>Limites de 6 a 20VDC</td>
+                      </tr>
+                      <tr>
+                        <th>Microcontrolador</th>
+                        <td>ATmega328P</td>
+                      </tr>
+                      <tr>
+                        <th>Voltagem de operação</th>
+                        <td>5VDC</td>
+                      </tr>
+                      <tr>
+                        <th>Pinos Digitais I/O</th>
+                        <td>14 Pinos</td>
+                      </tr>
+                      <tr>
+                        <th>Pinos PWM Digitais</th>
+                        <td>6 pinos <br>(3, 5, 6, 9, 10, 11)</td>
+                      </tr>
+                      <tr>
+                        <th>Entradas Analógicas</th>
+                        <td>6 Pinos (A0 a A5)</td>
+                      </tr>
+                      <tr>
+                        <th>Corrente DC por Pino I/O</th>
+                        <td>20 mA</td>
+                      </tr>
+                      <tr>
+                        <th>Corrente DC para Pino 3.3V</th>
+                        <td>50 mA</td>
+                      </tr>
+                      <tr>
+                        <th>Memória Flash 32 KB (ATmega328P)</th>
+                        <td>Com 512 Bytes usados para bootloader</td>
+                      </tr>
+                      <tr>
+                        <th>Memória SRAM</th>
+                        <td>2 KB (ATmega328P)</td>
+                      </tr>
+                      <tr>
+                        <th>Memória EEPROM</th>
+                        <td>1 KB (ATmega328P)</td>
+                      </tr>
+                      <tr>
+                        <th>Velocidade de clock</th>
+                        <td>16 MHZ</td>
+                      </tr>
+                      <tr>
+                        <th>LED_BUILTIN </th>
+                        <td>(led onboard) Pino 13</td>
+                      </tr>
+                      <tr>
+                        <th>Comprimento</th>
+                        <td>68.6 mm</td>
+                      </tr>
+                      <tr>
+                        <th>Comprimento</th>
+                        <td>53.4 mm</td>
+                      </tr>
+                      <tr>
+                        <th>Peso</th>
+                        <td>25 g</td>
+                      </tr>
+                    </table> 
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="card text-black-50">
+                  <div class="card-body text-danger">
+                    <i class="fas fa-thumbtack fa-3x"></i>
+                    <h6>Fresadora</h6>
+                    <table class="table-responsive table-striped text-black-50 text-center" id="maior">
+                      <tr>
+                        <th>Modelo</th>
+                        <td>SPL 2515</td>
+                      </tr>
+                      <tr>
+                        <th>Alimentação</th>
+                        <td>110 ~ 220V Automática</td>
+                      </tr>
+                      <tr>
+                        <th>Nº De Cabeças Laser</th>
+                        <td>1</td>
+                      </tr>
+                      <tr>
+                        <th>Marca</th>
+                        <td>Engraver</td>
+                      </tr>
+                      <tr>
+                        <th>Tecnologia Laser</th>
+                        <td>Laser Control Fault Cutting</td>
+                      </tr>
+                      <tr>
+                        <th>Potência do Laser</th>
+                        <td>110W</td>
+                      </tr>
+                      <tr>
+                        <th>Pacote de Transporte</th>
+                        <td>Wood Packing</td>
+                      </tr>
+                      <tr>
+                        <th>Software</th>
+                        <td>Recomendado</td>
+                      </tr>
+                      <tr>
+                        <th>Painel de Controle</th>
+                        <td>LCD</td>
+                      </tr>
+                      <tr>
+                        <th>Entrada de Dados</th>
+                        <td>USB</td>
+                      </tr>
+                      <tr>
+                        <th>Potência do Exaustor</th>
+                        <td>100W</td>
+                      </tr>
+                      <tr>
+                        <th>Temperatura de Trabalho</th>
+                        <td>0 ~ 80º</td>
+                      </tr>
+                    </table> 
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="card text-black-50">
+                  <div class="card-body text-warning">
+                    <i class="fas fa-print fa-3x"></i>
+                    <h6>Impressora 3D</h6>
+                    <table class="table-responsive table-striped text-black-50" id="maior">
+                      <tr>
+                        <th>Modelo</th>
+                        <td>CL2 Pro Plus</td>
+                      </tr>
+                      <tr>
+                        <th>Alimentação</th>
+                        <td>Bivolt 127v/220V Automático</td>
+                      </tr>
+                      <tr>
+                        <th>Potência</th>
+                        <td>360W</td>
+                      </tr>
+                      <tr>
+                        <th>Tecnologia</th>
+                        <td>FFF/FDM (Fabricação por Filamento Fundido) Extrusão Termoplático</td>
+                      </tr>
+                      <tr>
+                        <th>Cabeças de Impressão (Extrusores)</th>
+                        <td>1 Extrusor</td>
+                      </tr>
+                      <tr>
+                        <th>Área de Impressão</th>
+                        <td>300mm (L) x 230mm (P) x 450mm (A)</td>
+                      </tr>
+                      <tr>
+                        <th>Diâmetro do bico</th>
+                        <td>0,4mm</td>
+                      </tr>
+                      <tr>
+                        <th>Resolução / Altura de camada</th>
+                        <td>300 a 100 mícrons (0,3mm - 0,1mm)</td>
+                      </tr>
+                      <tr>
+                        <th>Tolerância dimensional</th>
+                        <td>0,2mm</td>
+                      </tr>
+                      <tr>
+                        <th>Mesa de impressão</th>
+                        <td>Plataforma de vidro aquecida</td>
+                      </tr>
+                      <tr>
+                        <th>Software/ Sistema Operacional</th>
+                        <td>Cliever Studio/ Windows 7 Ou Superior</td>
+                      </tr>
+                      <tr>
+                        <th>Formato de arquivo para impressão</th>
+                        <td>STL</td>
+                      </tr>
+                      <tr>
+                        <th>Conectividade</th>
+                        <td>USB e cartão SD (funcionamento independente de computador)</td>
+                      </tr>
+                      <tr>
+                        <th>Temperatura de operação</th>
+                        <td>15ºC a 30ºC</td>
+                      </tr>
+                      <tr>
+                        <th>Materiais de impressão</th>
+                        <td>Filamento PLA 1.75mm</td>
+                      </tr>
+                      <tr>
+                        <th>Estrutura metálica</th>
+                        <td>Aço carbono com pintura epóxi</td>
+                      </tr>
+                      <tr>
+                        <th>Peso impressora (líquido)</th>
+                        <td>34kg</td>
+                      </tr>
+                    </table> 
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="card text-black-50">
+                  <div class="card-body text-success">
+                    <i class="fas fa-x-ray fa-3x"></i>
+                    <h6>Cortadora Laser</h6>
+                    <table class="table-responsive table-striped text-black-50" id="maior">
+                      <tr>
+                        <th>Modelo</th>
+                        <td>LE 1490</td>
+                      </tr>
+                      <tr>
+                        <th>Alimentação</th>
+                        <td>110 ~ 220V Automática</td>
+                      </tr>
+                      <tr>
+                        <th>Nº De Cabeças Laser</th>
+                        <td>1</td>
+                      </tr>
+                      <tr>
+                        <th>Marca</th>
+                        <td>Engraver</td>
+                      </tr>
+                      <tr>
+                        <th>Tecnologia Laser</th>
+                        <td>Laser Control Fault Cutting</td>
+                      </tr>
+                      <tr>
+                        <th>Potência do Laser</th>
+                        <td>110W</td>
+                      </tr>
+                      <tr>
+                        <th>Pacote de Transporte</th>
+                        <td>Wood Packing</td>
+                      </tr>
+                      <tr>
+                        <th>Software</th>
+                        <td>Recomendado</td>
+                      </tr>
+                      <tr>
+                        <th>Painel de Controle</th>
+                        <td>LCD</td>
+                      </tr>
+                      <tr>
+                        <th>Entrada de Dados</th>
+                        <td>USB</td>
+                      </tr>
+                      <tr>
+                        <th>Potência do Exaustor</th>
+                        <td>100W</td>
+                      </tr>
+                      <tr>
+                        <th>Temperatura de Trabalho</th>
+                        <td>0 ~ 80º</td>
+                      </tr>
+                    </table> 
+                  </div>
+                </div>
+              </div>
+            </div>
+           </div> 
+          </div>
+        </div>
+      </div>
+                  <!-- fim intruções & manuais -->
+      <!--script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script-->
+      <script src="../js/slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script-->
+      <script src="../js/bootstrap.min.js"></script>           
+  </body>
+  <!-- Footer -->
+  <footer class="page-footer font-small bg-primary pt-4">
+    <!-- Footer Elements -->
+    <div class="container">
+
+      <!-- Social buttons --> 
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1" href="https://pt-br.facebook.com/" target="blank">
+          <i class="fab fa-facebook-f"> Facebook</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1" href="https://twitter.com/login?lang=pt" target="blank">
+          <i class="fab fa-twitter"> Twitter </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-linkedin mx-1" href="https://br.linkedin.com/" target="blank" >
+          <i class="fab fa-linkedin"> Linkedin </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1" href="https://www.instagram.com/?hl=pt-br" target="blank">
+          <i class="fab fa-instagram pr-1"> Instagram </i>
+          </a>
+        </li>
+      </ul>
+      <!-- Social buttons -->
+    </div>
+    <!-- Footer Elements -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 text-white" >© 2019 Copyright: Fablab
+    <!--a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a-->
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</html>

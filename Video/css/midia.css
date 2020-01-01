@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+#a1:hover{
+	cursor: pointer;
+	transform: translateY(-10px);
+	box-shadow: 4px 30px 16px 0px rgba(50,50,50,0.45);
+}
+
+div ul{
+	display:block;
+	margin: 30px;
+}
+.card{
+	margin-top: 20px;
+}
+video{
+	height: px;
+}
+#fale{
+	position: absolute;
+	right: 10px;
+}
+#btn6{
+	margin-top:5px;
+}
